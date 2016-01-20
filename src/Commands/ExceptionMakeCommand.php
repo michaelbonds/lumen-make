@@ -25,7 +25,7 @@ class ExceptionMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'stubs/exception.stub';
+        return __DIR__.'/stubs/exception.stub';
     }
 
     protected function getDefaultNamespace($namespace)
