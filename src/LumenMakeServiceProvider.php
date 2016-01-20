@@ -21,7 +21,7 @@ class LumenMakeServiceProvider extends ServiceProvider
 
     private function registerNewCommand($name = '', $class = '')
     {
-        $this->app->singleton('michaelb.lumen-make.'.$name, function ($app) {
+        $this->app->singleton('michaelb.lumen-make.'.$name, function ($app) use ($class) {
             return $app[$class];
         });
 
