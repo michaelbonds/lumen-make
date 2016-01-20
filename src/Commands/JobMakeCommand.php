@@ -16,6 +16,8 @@ class JobMakeCommand extends GeneratorCommand
      */
     protected $description = 'Make a new job.';
 
+    protected $type = 'Job';
+
     /**
      * Get the stub file for the generator.
      *
@@ -26,7 +28,7 @@ class JobMakeCommand extends GeneratorCommand
         return __DIR__.'stubs/Job.stub';
     }
 
-    protected function getRootNamespace($namespace)
+    protected function getDefaultNamespace($namespace)
     {
         return $namespace.'\Jobs';
     }

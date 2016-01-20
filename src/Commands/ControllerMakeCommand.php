@@ -16,6 +16,8 @@ class ControllerMakeCommand extends GeneratorCommand
      */
     protected $description = 'Make a new http controller.';
 
+    protected $type = 'Controller';
+
     /**
      * Get the stub file for the generator.
      *
@@ -26,7 +28,7 @@ class ControllerMakeCommand extends GeneratorCommand
         return __DIR__.'/stubs/controller.stub';
     }
 
-    protected function getRootNamespace($namespace)
+    protected function getDefaultNamespace($namespace)
     {
         return $namespace.'\Http\Controllers';
     }
