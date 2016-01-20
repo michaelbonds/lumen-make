@@ -7,6 +7,7 @@ use MichaelB\LumenMake\Commands\JobMakeCommand;
 use MichaelB\LumenMake\Commands\ConsoleMakeCommand;
 use MichaelB\LumenMake\Commands\ControllerMakeCommand;
 use MichaelB\LumenMake\Commands\ModelMakeCommand;
+use MichaelB\LumenMake\Commands\MiddlewareMakeCommand;
 
 
 class LumenMakeServiceProvider extends ServiceProvider
@@ -17,6 +18,7 @@ class LumenMakeServiceProvider extends ServiceProvider
         $this->registerNewCommand('console', ConsoleMakeCommand::class);
         $this->registerNewCommand('controller', ControllerMakeCommand::class);
         $this->registerNewCommand('model', ModelMakeCommand::class);
+        $this->registerNewCommand('middleware', MiddlewareMakeCommand::class);
     }
 
     private function registerNewCommand($name = '', $class = '')

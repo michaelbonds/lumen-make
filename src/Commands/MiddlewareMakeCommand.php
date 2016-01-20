@@ -4,19 +4,19 @@ namespace MichaelB\LumenMake\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
-class ModelMakeCommand extends GeneratorCommand
+class MiddlewareMakeCommand extends GeneratorCommand
 {
     /**
      * @var string
      */
-    protected $name = 'make:model';
+    protected $name = 'make:middleware';
 
     /**
      * @var string
      */
-    protected $description = 'Make a new model.';
+    protected $description = 'Make a new Middleware Class.';
 
-    protected $type = 'Model';
+    protected $type = 'Middleware';
 
     /**
      * Get the stub file for the generator.
@@ -25,11 +25,11 @@ class ModelMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/model.stub';
+        return __DIR__.'/stubs/middleware.stub';
     }
 
     protected function getDefaultNamespace($namespace)
     {
-        return $namespace;
+        return $namespace.'\Http\Middleware';
     }
 }
