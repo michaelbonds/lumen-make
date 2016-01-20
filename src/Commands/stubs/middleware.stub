@@ -4,7 +4,7 @@ namespace DummyNamespace;
 
 use Illuminate\Http\Request;
 
-class DummyClass extends BaseMiddleware
+class DummyClass
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,7 @@ class DummyClass extends BaseMiddleware
     public function handle(Request $request, \Closure $next)
     {
         // Do stuff before
-        
+
         $response = $next($request);
 
         // Do stuff after
