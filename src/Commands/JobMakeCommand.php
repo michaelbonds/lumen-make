@@ -9,7 +9,7 @@ class JobMakeCommand extends GeneratorCommand
     /**
      * @var string
      */
-    protected $name = 'make:job {name}';
+    protected $name = 'make:job';
 
     /**
      * @var string
@@ -23,7 +23,7 @@ class JobMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'./stubs/Job.stub';
+        return __DIR__.'stubs/Job.stub';
     }
 
     protected function getRootNamespace($namespace)
