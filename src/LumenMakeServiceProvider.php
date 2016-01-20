@@ -4,15 +4,27 @@ namespace MichaelB\LumenMake;
 
 use Illuminate\Support\ServiceProvider;
 use MichaelB\LumenMake\Commands\JobMakeCommand;
+use MichaelB\LumenMake\Commands\ConsoleMakeCommand;
+use MichaelB\LumenMake\Commands\ControllerMakeCommand;
+use MichaelB\LumenMake\Commands\ModelMakeCommand;
+
 
 class LumenMakeServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton('michaelb.lumen-make.job', function ($app) {
-            return $app[JobMakeCommand::class];
-        });
-        $this->commands('michaelb.lumen-make.job');
+        $this->registerNewCommand('job', JobMakeCommand::class);
+        $this->registerNewCommand('console', ConsoleMakeCommand::class);
+        $this->registerNewCommand('controller', ControllerMakeCommand::class);
+        $this->registerNewCommand('model', ModelMakeCommand::class);
     }
 
+    private function registerNewCommand($name = '', $class = '')
+    {
+        $this->app->singleton('michaelb.lumen-make.'.$name, function ($app) {
+            return $app[$class];
+        });
+
+        $this->commands('michaelb.lumen-make.'.$name);
+    }
 }

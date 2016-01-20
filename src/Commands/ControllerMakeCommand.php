@@ -4,17 +4,17 @@ namespace MichaelB\LumenMake\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
-class JobMakeCommand extends GeneratorCommand
+class ControllerMakeCommand extends GeneratorCommand
 {
     /**
      * @var string
      */
-    protected $name = 'make:job {name}';
+    protected $name = 'make:controller';
 
     /**
      * @var string
      */
-    protected $description = 'Make a new job.';
+    protected $description = 'Make a new http controller.';
 
     /**
      * Get the stub file for the generator.
@@ -23,11 +23,11 @@ class JobMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'./stubs/Job.stub';
+        return __DIR__.'./stubs/controller.stub';
     }
 
     protected function getRootNamespace($namespace)
     {
-        return $namespace.'\Jobs';
+        return $namespace.'\Http\Controllers';
     }
 }
