@@ -11,5 +11,10 @@
     ],
     "require": {
       "laravel/lumen-framework": "~5.1"
+    },
+    "autoload": {
+      "psr-4": {
+        "MichaelB\\LumenMake\\": "src/"
+      }
     }
 }
