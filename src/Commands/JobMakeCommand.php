@@ -25,7 +25,7 @@ class JobMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'stubs/Job.stub';
+        return __DIR__.'/stubs/Job.stub';
     }
 
     protected function getDefaultNamespace($namespace)
