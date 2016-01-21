@@ -45,4 +45,4 @@ if (env('APP_ENV') != 'production' || env('APP_ENV') == 'local') {
 * `make:model {name}` - Makes a new model in /
 * `make:middleware {name}` - Makes a new middleware class in Http/Middleware/
 * `make:exception {name}` - Makes a new exception class in Exceptions/
-
+* `make:event {name}` - Makes a new event class in Events/
