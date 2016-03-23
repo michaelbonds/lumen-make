@@ -2,11 +2,10 @@
 
 namespace MichaelB\LumenMake\Commands;
 
-use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
-class ConsoleMakeCommand extends GeneratorCommand
+class ConsoleMakeCommand extends BaseCommand
 {
     /**
      * The console command name.

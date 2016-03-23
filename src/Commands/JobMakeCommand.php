@@ -4,7 +4,7 @@ namespace MichaelB\LumenMake\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
-class JobMakeCommand extends GeneratorCommand
+class JobMakeCommand extends BaseCommand
 {
     /**
      * @var string

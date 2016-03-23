@@ -4,7 +4,7 @@ namespace MichaelB\LumenMake\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
-class ExceptionMakeCommand extends GeneratorCommand
+class ExceptionMakeCommand extends BaseCommand
 {
     /**
      * @var string

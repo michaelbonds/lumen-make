@@ -2,9 +2,7 @@
 
 namespace MichaelB\LumenMake\Commands;
 
-use Illuminate\Console\GeneratorCommand;
-
-class EventMakeCommand extends GeneratorCommand
+class EventMakeCommand extends BaseCommand
 {
     /**
      * @var string
